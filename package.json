@@ -1,0 +1,25 @@
+{
+  "name": "tallerelectiva2-nodejsexpressmongodb",
+  "version": "1.0.0",
+  "description": "Taller electiva 2 usando Nodejs Express MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebastianMora98/TallerElectiva2-NodejsExpressMongoDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebastianMora98/TallerElectiva2-NodejsExpressMongoDB/issues"
+  },
+  "homepage": "https://github.com/SebastianMora98/TallerElectiva2-NodejsExpressMongoDB#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
