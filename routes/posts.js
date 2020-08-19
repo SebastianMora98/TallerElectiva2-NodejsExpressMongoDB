@@ -6,8 +6,8 @@ const Post=require('../views/database');
 //GET BACK ALL THE POSTS
 router.get('/', async (req,res)=>{
     try {
-        const citas= await Post.find();
-        res.json(citas);
+        const posts= await Post.find();
+        res.json(posts);
     } catch (err) {
         res.json({message:err});
     }
@@ -16,16 +16,16 @@ router.get('/', async (req,res)=>{
 
 //SUBMIT A POST
 router.post('/', async ( req,res)=>{
-   const citas=new Post({
-       salon: req.body.salon,
+   const post=new Post({
+       title: req.body.title,
        hour: req.body.hour,
        date: req.body.date,
        description: req.body.description
    });
 
    try {
-         const savedCita = await citas.save();
-         res.json(savedCita);       
+         const savedPost = await post.save();
+         res.json(savedPost);       
    } catch (err) {
        res.json({ message:err });
    }
@@ -34,11 +34,11 @@ router.post('/', async ( req,res)=>{
 
 
 //SPECIFIC POST
-router.get('/:citaId', async (req,res)=>{
+router.get('/:postId', async (req,res)=>{
 
     try {
-        const cita= await Post.findById(req.params.citaId);
-        res.json(cita);
+        const post= await Post.findById(req.params.postId);
+        res.json(post);
     } catch (err) {
         res.json({message:err});
     }
