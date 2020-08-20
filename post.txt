@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "5f3dba45ed318f0868d812c7",
+        "nombre_empleado": "Sebastian",
+        "nombre_cliente": "Juan Carlos",
+        "tipo_trabajo": "Tintura cabello",
+        "salon": "2",
+        "hour": "11:00 am",
+        "date": "2020-09-10T00:00:00.000Z",
+        "description": "",
+        "creation_date": "2020-08-19T23:48:21.875Z",
+        "__v": 0
+    },
+    {
+        "_id": "5f3dba91ed318f0868d812c8",
+        "nombre_empleado": "Karem",
+        "nombre_cliente": "Holman",
+        "tipo_trabajo": "Pedicura",
+        "salon": "3",
+        "hour": "02:00 pm",
+        "date": "2020-10-10T00:00:00.000Z",
+        "description": "Diseño con flores",
+        "creation_date": "2020-08-19T23:49:37.987Z",
+        "__v": 0
+    },
+    {
+        "_id": "5f3dbb30ed318f0868d812ca",
+        "nombre_empleado": "Viviana",
+        "nombre_cliente": "Juan Carlos",
+        "tipo_trabajo": "Manicura",
+        "salon": "2",
+        "hour": "04:00 pm",
+        "date": "2020-10-15T00:00:00.000Z",
+        "description": "Diseño con brillantina",
+        "creation_date": "2020-08-19T23:52:16.695Z",
+        "__v": 0
+    }
+]
