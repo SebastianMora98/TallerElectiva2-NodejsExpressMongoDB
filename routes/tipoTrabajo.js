@@ -50,6 +50,18 @@ router.get('/:tipoId', async (req, res) => {
 });
 
 router.patch('/:tipoId', async (req, res) => {
+	//Validación de que el tipo de trabajo no exista
+	const tipo_trabajoExists = await TipoTrabajo.findOne({
+		nombre_tipo: req.body.nombre_tipo,
+	});
+	if (tipo_trabajoExists)
+		return res
+			.status(400)
+			.send(
+				'El tipo de trabajo ' +
+					tipo_trabajoExists.nombre_tipo +
+					' ya existe en la base de datos.'
+			);
 	try {
 		const updateTipo = await TipoTrabajo.updateOne(
 			{ _id: req.params.tipoId },

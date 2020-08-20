@@ -57,6 +57,22 @@ router.get('/:empleadoId', async (req, res) => {
 });
 
 router.patch('/:empleadoId', async (req, res) => {
+	//Validación de que el empleado no exista
+	const nombre_empleadoExists = await Empleados.findOne({
+		name: req.body.name,
+		employee_position: req.body.employee_position,
+	});
+	console.log(nombre_empleadoExists);
+	if (nombre_empleadoExists)
+		return res
+			.status(400)
+			.send(
+				'El empleado con el nombre ' +
+					nombre_empleadoExists.name +
+					' y la posición ' +
+					nombre_empleadoExists.employee_position +
+					' ya existe en la base de datos'
+			);
 	try {
 		const updateEmpleado = await Empleados.updateOne(
 			{ _id: req.params.empleadoId },
